@@ -6,7 +6,7 @@ namespace CodeCampOverflow.Controllers
 {
     public class HomeController
     {
-        public HomeViewModel Index()
+        public HomeViewModel IndexQuery()
         {
             var returnModel = new HomeViewModel();
 
@@ -26,7 +26,6 @@ namespace CodeCampOverflow.Controllers
                 Id = 3,
                 Title = "Why are manhole covers round?"
             });
-
 
             return returnModel;
         }

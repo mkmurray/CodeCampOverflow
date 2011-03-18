@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="header">
-        <a id="logo" href=""/"><img src="/content/images/logo.png" /></a>
-        <ul><li><a id="ask-question" href="#">Ask Question</a></li></ul>
+        <a id="logo" href="/"><img src="/content/images/logo.png" /></a>
+        <ul><li><a id="ask-question" href="/question/ask">Ask Question</a></li></ul>
     </div>
     <div id="contents">
         <asp:ContentPlaceHolder id="BodyPlaceHolder" runat="server">

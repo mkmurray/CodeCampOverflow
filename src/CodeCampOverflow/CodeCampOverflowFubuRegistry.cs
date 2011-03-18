@@ -14,13 +14,13 @@ namespace CodeCampOverflow
             Actions.IncludeClassesSuffixedWithController();
 
             Routes
-                .HomeIs<HomeController>(x => x.Index())
+                .HomeIs<HomeController>(x => x.IndexQuery())
                 .IgnoreControllerNamespaceEntirely()
                 .IgnoreMethodsNamed("Index")
                 .IgnoreMethodSuffix("Command")
                 .IgnoreMethodSuffix("Query")
                 .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Command"), "POST")
-                .ConstrainToHttpMethod(action => action.Method.Name.StartsWith("Query"), "GET");
+                .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Query"), "GET");
 
             Views.TryToAttachWithDefaultConventions();
         }

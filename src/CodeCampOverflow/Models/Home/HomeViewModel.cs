@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using CodeCampOverflow.Models.Domain;
 
 namespace CodeCampOverflow.Models.Home
 {
@@ -7,9 +6,9 @@ namespace CodeCampOverflow.Models.Home
     {
         public HomeViewModel()
         {
-            Questions = new List<Question>();
+            Questions = new List<Domain.Question>();
         }
 
-        public IList<Question> Questions { get; private set; }
+        public IList<Domain.Question> Questions { get; private set; }
     }
 }

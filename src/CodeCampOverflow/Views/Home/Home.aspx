@@ -1,4 +1,4 @@
-<%@ Page Inherits="CodeCampOverflow.Views.Home.Home" Title="Code Camp Overflow Homepage" Language="C#" MasterPageFile="~/Views/Shared/Master.master" %>
+<%@ Page Inherits="CodeCampOverflow.Views.Home.Home" Title="Code Camp Overflow | Home" Language="C#" MasterPageFile="~/Views/Shared/Master.master" %>
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
 <% if (Model.Questions.Any()) { %>
     <ul>
@@ -8,7 +8,7 @@
                     <div class="answer-count"><%= question.Answers.Count %></div>
                     <div>answer<%= question.Answers.Count == 1 ? "" : "s" %></div>
                 </div>
-                <h3><a href="#"><%= question.Title %></a></h3>
+                <h3><a href="question/<%= question.Id %>"><%= question.Title %></a></h3>
             </li>
         <% } %>
     </ul>

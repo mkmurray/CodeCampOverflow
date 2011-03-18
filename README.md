@@ -36,3 +36,25 @@ needed DLL libraries to build a FubuMVC website can then be found in the `build`
 directory, though currently that directory contains more than is necessary.  A
 simple configuration of a Fubu web application can be found in the
 `Global.asax.cs` file.
+
+##2-ConventionsAndDiagnostics
+
+At this milestone, we have the basics of a website coming together.  The most
+important first step is to set up conventions in your `FubuRegistry` that drive
+controller action method discovery, define routes with their inputs &
+constraints, and wire up actions to output through view location.  FubuMVC has a
+terrific set of diagnostics screens that help you visualize your conventions in
+action.  They are accessed by appending `/_fubu` to the root URL of your web
+site (`http://localhost:58324/_fubu`, for example). Another thing you will
+notice about a FubuMVC code base is the discouragement of framework noise
+(attributes, inheritence, etc.) as well as the opinionated requirements for
+inputs and outputs for controller actions.  Three states of controller action
+input/output models are allowed:
+
+* One input/Zero output
+* Zero input/One output
+* One input/One output
+
+Creating strongly-typed models for input and output allows for reuse between
+controller actions and more effective application of behavior and policies via
+conventions.
