@@ -6,3 +6,4 @@ _ReSharper.*
 *.ReSharper.user
 *.suo
 *.userprefs
+RavenDB/

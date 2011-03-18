@@ -1,4 +1,5 @@
-﻿using CodeCampOverflow.Controllers;
+﻿using CodeCampOverflow.Behaviors;
+using CodeCampOverflow.Controllers;
 using FubuMVC.Core;
 
 namespace CodeCampOverflow
@@ -23,6 +24,8 @@ namespace CodeCampOverflow
                 .ConstrainToHttpMethod(action => action.Method.Name.EndsWith("Query"), "GET");
 
             Views.TryToAttachWithDefaultConventions();
+
+            ApplyConvention<PersistenceConvention>();
         }
     }
 }

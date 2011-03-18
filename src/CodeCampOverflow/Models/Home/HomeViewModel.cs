@@ -4,11 +4,6 @@ namespace CodeCampOverflow.Models.Home
 {
     public class HomeViewModel
     {
-        public HomeViewModel()
-        {
-            Questions = new List<Domain.Question>();
-        }
-
-        public IList<Domain.Question> Questions { get; private set; }
+        public IList<Domain.Question> Questions { get; set; }
     }
 }
