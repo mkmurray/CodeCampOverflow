@@ -12,6 +12,10 @@
         <a id="logo" href="/"><img src="/content/images/logo.png" /></a>
         <ul><li><a id="ask-question" href="/question/ask">Ask Question</a></li></ul>
     </div>
+    <h1>
+        <asp:ContentPlaceHolder id="HeadTitlePlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </h1>
     <div id="contents">
         <asp:ContentPlaceHolder id="BodyPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>

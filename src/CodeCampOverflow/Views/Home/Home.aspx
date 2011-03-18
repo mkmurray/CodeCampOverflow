@@ -1,4 +1,5 @@
 <%@ Page Inherits="CodeCampOverflow.Views.Home.Home" Title="Code Camp Overflow | Home" Language="C#" MasterPageFile="~/Views/Shared/Master.master" %>
+<asp:Content ContentPlaceHolderID="HeadTitlePlaceHolder" runat="server">Top Questions</asp:Content>
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
 <% if (Model.Questions.Any()) { %>
     <ul>

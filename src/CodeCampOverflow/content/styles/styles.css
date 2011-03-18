@@ -9,7 +9,6 @@ body
 #header
 {
     overflow: hidden;
-    border-bottom: 1px solid black;
 }
 
 #logo
@@ -103,6 +102,22 @@ a#ask-question:hover
     height: 25px;
 }
 
+h1
+{
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 170%;
+    border-bottom: 1px solid black;
+}
+
+h2
+{
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 170%;
+    border-bottom: 1px solid black;
+}
+
 h3
 {
     float: left;
@@ -120,4 +135,60 @@ h3 a
 h3 a:hover
 {
     text-decoration: underline;
+}
+
+p
+{
+    margin-left: 20px;
+    font-size: 107%;
+    line-height: 130%;
+}
+
+.answer
+{
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 15px;
+}
+
+#your-answer-title
+{
+    margin-top: 20px;
+}
+
+textarea
+{
+    margin: 20px;
+    width: 95%;
+    resize: none;
+}
+
+.no-bar
+{
+    border-bottom: none;
+}
+
+input[type="submit"]
+{
+    font-weight: bold;
+    font-size: 130%;
+    border: 1px solid #888;
+    padding: 2px;
+    cursor: pointer;
+}
+
+input[type="text"]
+{
+    width: 93%;
+}
+
+#question-title
+{
+    margin-top: 20px;
+}
+
+label
+{
+    font-size: 115%;
+    font-weight: bold;
+    margin-right: 15px;
 }

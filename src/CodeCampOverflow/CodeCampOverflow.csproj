@@ -105,6 +105,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ObjectExtensions.cs" />
+    <Compile Include="Models\Question\AnswerInputModel.cs" />
+    <Compile Include="Models\Question\AskInputModel.cs" />
     <Compile Include="Models\Question\AskQuestionViewModel.cs" />
     <Compile Include="Models\Question\QuestionInputModel.cs" />
     <Compile Include="Models\Question\QuestionViewModel.cs" />

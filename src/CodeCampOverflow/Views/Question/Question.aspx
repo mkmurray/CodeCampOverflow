@@ -1,4 +1,18 @@
 <%@ Page Inherits="CodeCampOverflow.Views.Question.Question" Title="Code Camp Overflow | Question" Language="C#" MasterPageFile="~/Views/Shared/Master.master" %>
+<asp:Content ContentPlaceHolderID="HeadTitlePlaceHolder" runat="server"><%= Model.Title %></asp:Content>
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
-You are viewing question <%= Model.Id %>...Not very helpful is it?
+<p><%= Model.Body %></p>
+<h2>
+    <% if (Model.Answers.Any()) { %>
+        <%= Model.Answers.Count %> Answer<%= Model.Answers.Count == 1 ? "" : "s" %>
+    <% } %>
+</h2>
+<% foreach (var answer in Model.Answers) { %>
+    <p class="answer"><%= answer.Body %></p>
+<% } %>
+<h2 id="your-answer-title" class="no-bar">Your Answer</h2>
+<form action="/question/<%= Model.Id %>/answer" method="post">
+    <textarea rows="5" id="answer" name="answer"></textarea>
+    <input type="submit" value="Post Your Answer"/>
+</form>
 </asp:Content>
