@@ -19,6 +19,10 @@ brought down locally to your own machine, you can easily switch between the
 different snapshots of the code base by issuing `git checkout tagNameHere`
 commands.
 
+Also, this site was designed with only Google Chrome web browser in mind. Any
+modern web browser probably renders the sample web app just fine, but all bets
+are off with regard to all versions of Internet Explorer.
+
 ##1-Barebones
 
 This tag contains a code base with just enough infrastructure to run a blank
@@ -58,3 +62,5 @@ input/output models are allowed:
 Creating strongly-typed models for input and output allows for reuse between
 controller actions and more effective application of behavior and policies via
 conventions.
+
+**This demo is still under construction**
