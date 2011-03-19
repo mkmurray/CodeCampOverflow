@@ -1,4 +1,4 @@
-<%@ Page Inherits="CodeCampOverflow.Views.Question.Question" Title="Code Camp Overflow | Question" Language="C#" MasterPageFile="~/Views/Shared/Master.master" %>
+<%@ Page Inherits="CodeCampOverflow.Views.Question.Question" Title="Code Camp Overflow | Question" Language="C#" MasterPageFile="~/Views/Shared/Site.master" %>
 <asp:Content ContentPlaceHolderID="HeadTitlePlaceHolder" runat="server"><%= Model.Title %></asp:Content>
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
 <p><%= Model.Body %></p>
@@ -11,8 +11,8 @@
     <p class="answer"><%= answer.Body %></p>
 <% } %>
 <h2 id="your-answer-title" class="no-bar">Your Answer</h2>
-<form action="/question/<%= Model.Id %>/answer" method="post">
+<%= this.FormFor(new AnswerInputModel { QuestionId = Model.Id }) %>
     <textarea rows="5" id="answer" name="answer"></textarea>
     <input type="submit" value="Post Your Answer"/>
-</form>
+<%= this.EndForm() %>
 </asp:Content>

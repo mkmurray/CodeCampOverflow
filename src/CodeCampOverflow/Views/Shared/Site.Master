@@ -1,16 +1,16 @@
-<%@ Master Language="C#" %>
+﻿<%@ Master Language="C#" CodeBehind="Site.Master.cs" Inherits="CodeCampOverflow.Views.Shared.Site" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Code Camp Overflow</title>
     <link rel="Stylesheet" type="text/css" href="/content/styles/styles.css" />
-    <asp:ContentPlaceHolder id="HeadPlaceHolder" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div id="header">
         <a id="logo" href="/"><img src="/content/images/logo.png" /></a>
-        <ul><li><a id="ask-question" href="/question/ask">Ask Question</a></li></ul>
+        <ul><li>
+            <%= this.LinkTo<QuestionController>(x => x.AskQuery()).Id("ask-question").Text("Ask Question") %>
+        </li></ul>
     </div>
     <h1>
         <asp:ContentPlaceHolder id="HeadTitlePlaceHolder" runat="server">
