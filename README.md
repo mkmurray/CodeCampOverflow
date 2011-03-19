@@ -88,4 +88,19 @@ and then later [created a more stream-lined and accessible
 solution](https://github.com/bobpace/MvcToFubu).  Definitely worth a look if you
 are hesitant to jump full-bore into FubuMVC all at once.
 
-**This demo is still under construction**
+##4-HtmlConventions
+
+This FubuMVC feature is a convenient way to clean up and allow reuse of markup
+for specified object types, models with marker interfaces or attributes, or
+matching model property names to specific criteria, again all applied via
+conventions.  In this sample I show a few of the default conventions, like text
+boxes for editors of string properties.  I also make custom display and editor
+conventions for string properties that are named `Body` by using paragraph (`p`)
+and `textarea` tags respectively.  Imagine being able to define automatic markup
+generation for certain domain types you've defined or even just with those
+rediculous `DateTime` objects in .NET (think calendar controls and other similar
+possibilities).  This feature shares many of the same advantages as templating
+and partial view solutions, but I would say that HtmlConventions are likely
+meant to be used for simple and straight-forward markup generation and
+templating.
+

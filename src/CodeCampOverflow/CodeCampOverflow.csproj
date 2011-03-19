@@ -99,6 +99,7 @@
     <Compile Include="Behaviors\ValidationNode.cs" />
     <Compile Include="CodeCampOverflowContainerRegistry.cs" />
     <Compile Include="CodeCampOverflowFubuRegistry.cs" />
+    <Compile Include="CodeCampOverflowHtmlConventions.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Models\Domain\Answer.cs" />

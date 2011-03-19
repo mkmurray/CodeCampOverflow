@@ -2,10 +2,10 @@
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
 <%= this.FormFor<AskInputModel>() %>
     <div id="question-title">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" />
+        <%= this.LabelFor<AskInputModel>(question => question.Title) %>
+        <%= this.InputFor<AskInputModel>(question => question.Title) %>
     </div>
-    <textarea rows="5" id="body" name="body" ></textarea>
+    <%= this.InputFor<AskInputModel>(question => question.Body) %>
     <input type="submit" value="Post Your Question" />
 <%= this.EndForm() %>
 </asp:Content>

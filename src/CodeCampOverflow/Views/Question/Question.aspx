@@ -1,18 +1,19 @@
 <%@ Page Inherits="CodeCampOverflow.Views.Question.Question" Title="Code Camp Overflow | Question" Language="C#" MasterPageFile="~/Views/Shared/Site.master" %>
+<%@ Import Namespace="CodeCampOverflow.Models.Domain" %>
 <asp:Content ContentPlaceHolderID="HeadTitlePlaceHolder" runat="server"><%= Model.Title %></asp:Content>
 <asp:Content ContentPlaceHolderID="BodyPlaceHolder" runat="server">
-<p><%= Model.Body %></p>
+<%= this.DisplayFor(model => model.Body) %>
 <h2>
     <% if (Model.Answers.Any()) { %>
         <%= Model.Answers.Count %> Answer<%= Model.Answers.Count == 1 ? "" : "s" %>
     <% } %>
 </h2>
 <% foreach (var answer in Model.Answers) { %>
-    <p class="answer"><%= answer.Body %></p>
+    <%= this.DisplayFor(answer, a => a.Body).AddClass("answer") %>
 <% } %>
 <h2 id="your-answer-title" class="no-bar">Your Answer</h2>
 <%= this.FormFor(new AnswerInputModel { QuestionId = Model.Id }) %>
-    <textarea rows="5" id="body" name="body"></textarea>
+    <%= this.InputFor<AnswerInputModel>(answer => answer.Body) %>
     <input type="submit" value="Post Your Answer"/>
 <%= this.EndForm() %>
 </asp:Content>

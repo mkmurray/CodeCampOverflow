@@ -27,6 +27,8 @@ namespace CodeCampOverflow
 
             ApplyConvention<ValidationConvention>();
             ApplyConvention<PersistenceConvention>();
+
+            HtmlConvention<CodeCampOverflowHtmlConventions>();
         }
     }
 }
