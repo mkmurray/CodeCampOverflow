@@ -25,6 +25,7 @@ namespace CodeCampOverflow
 
             Views.TryToAttachWithDefaultConventions();
 
+            ApplyConvention<ValidationConvention>();
             ApplyConvention<PersistenceConvention>();
         }
     }

@@ -94,6 +94,9 @@
   <ItemGroup>
     <Compile Include="Behaviors\PersistenceBehavior.cs" />
     <Compile Include="Behaviors\PersistenceConvention.cs" />
+    <Compile Include="Behaviors\ValidationBehavior.cs" />
+    <Compile Include="Behaviors\ValidationConvention.cs" />
+    <Compile Include="Behaviors\ValidationNode.cs" />
     <Compile Include="CodeCampOverflowContainerRegistry.cs" />
     <Compile Include="CodeCampOverflowFubuRegistry.cs" />
     <Compile Include="Controllers\HomeController.cs" />

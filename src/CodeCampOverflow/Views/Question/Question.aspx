@@ -12,7 +12,7 @@
 <% } %>
 <h2 id="your-answer-title" class="no-bar">Your Answer</h2>
 <%= this.FormFor(new AnswerInputModel { QuestionId = Model.Id }) %>
-    <textarea rows="5" id="answer" name="answer"></textarea>
+    <textarea rows="5" id="body" name="body"></textarea>
     <input type="submit" value="Post Your Answer"/>
 <%= this.EndForm() %>
 </asp:Content>

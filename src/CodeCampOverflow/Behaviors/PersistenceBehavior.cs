@@ -14,8 +14,6 @@ namespace CodeCampOverflow.Behaviors
 
         protected override void afterInsideBehavior()
         {
-            base.afterInsideBehavior();
-
             _session.SaveChanges();
             _session.Dispose();
         }

@@ -1,5 +1,5 @@
 Code Camp Overflow
-===============
+==================
 
 Sample code given at a [Utah Code Camp](http://utcodecamp.com/) presentation
 introducing the .NET open-source MVC web framework
@@ -62,5 +62,30 @@ input/output models are allowed:
 Creating strongly-typed models for input and output allows for reuse between
 controller actions and more effective application of behavior and policies via
 conventions.
+
+##3-Behaviors
+
+The code base at this tag contains one of my favorite features of FubuMVC,
+namely behaviors.  They are conventionally-applied nodes in the composable
+request/response pipeline (called a behavior chain).  In FubuMVC, controller
+actions are just another node in that pipeline; same goes for the return of a
+view.  Fubu allows a developer great flexibility and control over the nodes in
+any given behavior chain (like ordering, insertion, deletion, etc.).  At this
+point in the web application, I have added a persistence behavior (that does
+does session management before and after all action calls) that uses RavenDB
+document database for extremly simple (and naïve) object persistence.  I also
+show how to conventionally apply a simple validation behavior that makes sure
+text fields and areas are not blank upon form submission (and then unhelpfully
+return a HTTP 500 Internal Server Error and error message that doesn't even take
+you back to the page with the offending form inputs).
+
+We started using FubuMVC behaviors at my current company in our ASP.NET MVC site
+for a while before we were ready to begin migrating fully to Fubu.  A coworker
+of mine bloged about the process
+[here](http://paceyourself.net/2010/08/06/integrating-fubumvc-with-aspnet-mvc-part-1/)
+and [here](http://paceyourself.net/2010/08/13/integrating-fubumvc-with-aspnet-mvc-part-2/),
+and then later [created a more stream-lined and accessible
+solution](https://github.com/bobpace/MvcToFubu).  Definitely worth a look if you
+are hesitant to jump full-bore into FubuMVC all at once.
 
 **This demo is still under construction**

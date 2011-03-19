@@ -49,7 +49,7 @@ namespace CodeCampOverflow.Controllers
             question.Answers.Add(new Answer
             {
                 Id = Guid.NewGuid().ToString("D"),
-                Body = inputModel.Answer
+                Body = inputModel.Body
             });
 
             return FubuContinuation.RedirectTo(new QuestionInputModel { Id = inputModel.QuestionId });
