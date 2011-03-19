@@ -73,7 +73,7 @@ view.  Fubu allows a developer great flexibility and control over the nodes in
 any given behavior chain (like ordering, insertion, deletion, etc.).  At this
 point in the web application, I have added a persistence behavior (that does
 does session management before and after all action calls) that uses RavenDB
-document database for extremly simple (and naïve) object persistence.  I also
+document database for extremly simple (and naive) object persistence.  I also
 show how to conventionally apply a simple validation behavior that makes sure
 text fields and areas are not blank upon form submission (and then unhelpfully
 return a HTTP 500 Internal Server Error and error message that doesn't even take
