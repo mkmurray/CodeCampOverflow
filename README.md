@@ -1,6 +1,8 @@
 Code Camp Overflow
 ==================
 
+Note: I will be updating this repository as FubuMVC reaches beta and later version 1.0.
+
 Sample code given at a [Utah Code Camp](http://utcodecamp.com/) presentation
 introducing the .NET open-source MVC web framework
 [FubuMVC](http://fubumvc.com/). FubuMVC (Fubu = for us, by us) focuses on rapid
